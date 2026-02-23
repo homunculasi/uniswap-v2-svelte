@@ -1,18 +1,59 @@
 @import "tailwindcss";
+@import "@fontsource/inter";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
 
 @theme {
   --font-family-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   
-  --color-uniswap-pink: #ff007a;
-  --color-uniswap-dark: #191b1f;
-  --color-uniswap-dark-secondary: #212429;
-  --color-uniswap-dark-tertiary: #2c2f36;
-  --color-uniswap-text: #ffffff;
-  --color-uniswap-text-secondary: #8f96ac;
+  --color-uni-main: #212429;
+  --color-uni-card: #191B1F;
+  --color-uni-input: #2C2F36;
+  --color-uni-pink: #FF007A;
+  --color-uni-pink-hover: #D50066;
+  --color-uni-pink-light: rgba(255, 0, 122, 0.2);
+  --color-uni-text: #FFFFFF;
+  --color-uni-text-secondary: #C3C5CB;
+  --color-uni-text-tertiary: #8F96AC;
+  --color-uni-border: #2C2F36;
+
+  --radius-uni: 1.25rem;
+  --radius-uni-sm: 0.75rem;
+
+  --shadow-uni: 0 4px 8px 0 rgba(0, 0, 0, 0.03), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
 }
 
 body {
-  background-color: var(--color-uniswap-dark);
-  color: var(--color-uniswap-text);
+  background-color: var(--color-uni-main);
+  color: var(--color-uni-text);
   font-family: var(--font-family-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-uni-main);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-uni-input);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-uni-border);
+}
+
+/* Hide number input arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
 }
