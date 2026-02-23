@@ -3,7 +3,7 @@
     id = '', 
     value = $bindable(''), 
     currency = null as { symbol: string, logoURI: string } | null, 
-    onSelect = () => {},
+    onSelect = (() => {}) as (e?: MouseEvent) => void,
     balance = '0.00',
     label = 'Input'
   } = $props();
